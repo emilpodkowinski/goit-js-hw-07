@@ -21,7 +21,7 @@ for (const img of galleryItems) {
 galleryEl.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.tagName !== "IMG") return;
-  const box = basicLightbox.create(`<img src="${event.target.dataset.source}" width="500">`);
+  const box = basicLightbox.create(`<img src="${event.target.dataset.source}">`);
   box.show();
 });
 

@@ -6,14 +6,15 @@ import { galleryItems } from './gallery-items.js';
 const galleryEl = document.querySelector(".gallery");
 
 galleryItems.forEach((el) => {
-  galleryEl.innerHTML += `<li> <a class="gallery__link" href="${el.oryginal}">
-  <img class="gallery__image" src="${el.preview}" alt="${el.decription}" />
-</a></li>`;
+  galleryEl.innerHTML += ` <a class="gallery__link" href="${el.original}">
+  <img class="gallery__image" src="${el.preview}" alt="${el.description}" />
+</a>`;
 });
   
 
-  var lightbox = $('.gallery li a').simpleLightbox({
-    captionDelay: 250,
-    captionsData: "alt", 
-  });
+let lightbox = new SimpleLightbox(".gallery a",{
+  captionDelay: 250,
+  captionsData: "alt"
+});
+
 
